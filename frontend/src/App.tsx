@@ -1,41 +1,40 @@
-import { useState } from "react";
-
-import "./App.css";
-import AppRouter from "./routes";
+import React from "react";
+import { Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
-import Home from "./components/home/Home";
-import Welcome from "./components/home/Welcome";
-import Sidepic from "./components/home/Sidepic";
-function App() {
-  const [count, setCount] = useState(0);
-  const links = [
-    { name: "Events", href: "#" },
-    { name: "About us", href: "#" },
-    { name: "Resources", href: "#" },
-    { name: "Store", href: "#" },
-    { name: "Contact", href: "#" },
-  ];
+import Homes from "./components/home";
+import Events from "./components/Eventpage";
+import About from "./components/about";
+import Resources from "./components/Resources";
+import Contact from "./components/Contact";
+import Store from "./components/store";
+import Donate from "./components/donate";
 
-  const logo = "path-to-logo.png"; // Replace with your logo path
-  const donateLink = "/donate";
-
+const App = () => {
   return (
-    <>
-      {/* <AppRouter/> */}
-      <div className="p-6 container mx-auto space-y-4">
-        <Navbar links={links} logo={logo} donateLink={donateLink} />
-        <Home />
-        <div className="flex gap-4  relative">
-          <div>
-            <Welcome />
-          </div>
-          <div className="relative">
-            <Sidepic />
-          </div>
-        </div>
-      </div>
-    </>
+    <div>
+      <Navbar
+        links={[
+          { name: "Event", path: "/event" },
+          { name: "About us", path: "/about" },
+          { name: "Resources", path: "/resources" },
+          { name: "Store", path: "/store" },
+          { name: "Contact", path: "/contact" },
+        ]}
+        logo="path-to-logo.png"
+        donateText="Donate"
+      />
+
+      <Routes>
+        <Route path="/" element={<Homes />} />
+        <Route path="/event" element={<Events />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/donate" element={<Donate />} />
+      </Routes>
+    </div>
   );
-}
+};
 
 export default App;
