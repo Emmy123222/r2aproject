@@ -1,5 +1,10 @@
+import Ourstory from "./Ourstory";
+
+
 const About = () => {
-  return <div></div>;
+  return <div className="relative mx-auto container">
+    <Ourstory/>
+  </div>;
 };
 
 export default About;
