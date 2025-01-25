@@ -4,9 +4,9 @@ import Home from "./Home";
 
 const Homes = () => {
   return (
-    <div className="relative mx-auto container">
+    <div className="relative mx-auto container max-sm:p-5 overflow-x-hidden space-y-6  ">
       <Home />
-      <div className="flex gap-4  relative mx-auto">
+      <div className="flex gap-4 max-sm:gap-0 p-3">
         <div>
           <Welcome />
         </div>

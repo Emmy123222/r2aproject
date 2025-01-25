@@ -1,5 +1,9 @@
+import Basic from "./ResourceSection";
+
 const Resources = () => {
-  return <div></div>;
+  return <div>
+    <Basic/>
+  </div>;
 };
 
 export default Resources;

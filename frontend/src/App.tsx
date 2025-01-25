@@ -1,5 +1,4 @@
-import React from "react";
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Homes from "./components/home";
 import Events from "./components/Eventpage";
@@ -7,7 +6,9 @@ import About from "./components/about";
 import Resources from "./components/Resources";
 import Contact from "./components/Contact";
 import Store from "./components/store";
-import Donate from "./components/donate";
+// import Donate from "./components/donate";
+import DonatePage from "./components/donate";
+import Footer from "./components/layout/Footer";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
           { name: "Contact", path: "/contact" },
         ]}
         logo="path-to-logo.png"
-        donateText="Donate"
+        donateText="Get Involved"
       />
 
       <Routes>
@@ -31,8 +32,9 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/store" element={<Store />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/donate" element={<Donate />} />
+        <Route path="/donate" element={<DonatePage />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
