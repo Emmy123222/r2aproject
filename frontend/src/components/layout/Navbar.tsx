@@ -8,18 +8,18 @@ interface NavBarProps {
 }
 
 const Navbar: React.FC<NavBarProps> = ({ links, donateText }) => {
-  const navigate = useNavigate(); // React Router navigation hook
-  const [isOpen, setIsOpen] = useState(false); // State for toggling mobile menu
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNavigation = (path: string) => {
-    navigate(path); // Navigate to the specified path
-    setIsOpen(false); // Close the menu on navigation
+    navigate(path);
+    setIsOpen(false);
   };
 
-  const toggleMenu = () => setIsOpen(!isOpen); // Toggle the hamburger menu
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-white border-b border-gray-200">
+    <nav className="bg-black border-b border-gray-200 fixed top-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left Section: Home Icon */}
@@ -33,7 +33,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, donateText }) => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 text-white"
             >
               <path
                 strokeLinecap="round"
@@ -48,7 +48,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, donateText }) => {
             {links.map((link, index) => (
               <div
                 key={index}
-                className="text-gray-700 hover:text-red-600 font-medium cursor-pointer"
+                className="text-white hover:text-red-600 font-medium cursor-pointer"
                 onClick={() => handleNavigation(link.path)}
               >
                 {link.name}
@@ -66,10 +66,10 @@ const Navbar: React.FC<NavBarProps> = ({ links, donateText }) => {
             </div>
           </div>
 
-          {/* Hamburger Menu (visible on small screens) */}
+          {/* Hamburger Menu */}
           <div className="md:hidden flex items-center">
             <button
-              className="text-gray-700 hover:text-red-600 focus:outline-none"
+              className="text-white hover:text-white focus:outline-none"
               onClick={toggleMenu}
             >
               <svg
@@ -92,19 +92,19 @@ const Navbar: React.FC<NavBarProps> = ({ links, donateText }) => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-gray-100 border-t border-gray-200">
+          <div className="md:hidden  ">
             <div className="space-y-2 px-4 py-4">
               {links.map((link, index) => (
                 <div
                   key={index}
-                  className="text-gray-700 hover:text-red-600 font-medium cursor-pointer"
+                  className="text-white hover:text-red-600 font-medium cursor-pointer"
                   onClick={() => handleNavigation(link.path)}
                 >
                   {link.name}
                 </div>
               ))}
               <div
-                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 cursor-pointer"
+                className="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 cursor-pointer"
                 onClick={() => handleNavigation("/donate")}
               >
                 {donateText}

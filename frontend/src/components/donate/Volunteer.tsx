@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import arrow from "../../assets/arrow.webp";
+import arrow from "@/assets/470292.webp";
 import emailjs from "emailjs-com";
 
 const Volunteer: React.FC = () => {
@@ -76,14 +76,14 @@ const Volunteer: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="px-4 py-6 max-sm:px-2 max-sm:py-4">
       {/* Volunteer Header */}
-      <div className="flex justify-between">
-        <div>
-          <h2 className="text-xl font-semibold text-gray-700">
+      <div className="flex justify-between items-start  max-sm:space-y-4">
+        <div className="flex-1">
+          <h2 className="text-xl font-semibold text-gray-700 max-sm:text-lg">
             Volunteer Opportunities
           </h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 max-sm:text-sm">
             Explore various volunteer roles and responsibilities. Apply to make
             a difference in the lives of others.
           </p>
@@ -92,7 +92,7 @@ const Volunteer: React.FC = () => {
           <img
             src={arrow}
             alt="Toggle Dropdown"
-            className={`w-9 h-8 cursor-pointer transform transition-transform ${
+            className={`w-8 h-8 cursor-pointer transform transition-transform ${
               isDropdownOpen ? "rotate-180" : "rotate-0"
             }`}
             onClick={toggleDropdown}
@@ -102,8 +102,8 @@ const Volunteer: React.FC = () => {
 
       {/* Dropdown List */}
       {isDropdownOpen && (
-        <div className="p-4 mt-2 rounded-lg shadow-lg w-full">
-          <ul className="space-y-2 list-disc pl-6">
+        <div className="p-4 mt-2 rounded-lg shadow-lg w-full max-sm:p-3">
+          <ul className="space-y-2 list-disc pl-6 max-sm:pl-4 max-sm:text-sm">
             {units.map((unit, index) => (
               <li
                 key={index}
@@ -119,51 +119,51 @@ const Volunteer: React.FC = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-[26px] shadow-lg w-full max-w-md">
-            <h2 className="text-xl font-semibold text-gray-700 mb-4">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 px-4 max-sm:px-2">
+          <div className="bg-white p-6 rounded-[26px] shadow-lg w-full max-w-md max-sm:p-4">
+            <h2 className="text-xl font-semibold text-gray-700 mb-4 max-sm:text-lg">
               Join the {selectedUnit}
             </h2>
-            <form className="space-y-4">
+            <form className="space-y-4 max-sm:space-y-3">
               <input
                 type="text"
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 max-sm:text-sm"
               />
               <input
                 type="text"
                 placeholder="Phone Number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 max-sm:text-sm"
               />
               <input
                 type="text"
                 placeholder="WhatsApp Number"
                 value={whatsapp}
                 onChange={(e) => setWhatsapp(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 max-sm:text-sm"
               />
               <input
                 type="email"
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 max-sm:text-sm"
               />
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="w-full bg-red-600 text-white py-2 rounded-[26px] hover:bg-red-700"
+                className="w-full bg-red-600 text-white py-2 rounded-[26px] hover:bg-red-700 max-sm:py-1 max-sm:text-sm"
               >
                 Submit
               </button>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(false)}
-                className="w-full bg-gray-300 text-gray-700 py-2 rounded-[26px] hover:bg-gray-400 mt-2"
+                className="w-full bg-gray-300 text-gray-700 py-2 rounded-[26px] hover:bg-gray-400 mt-2 max-sm:py-1 max-sm:text-sm"
               >
                 Cancel
               </button>

@@ -8,12 +8,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black bg-opacity-30 backdrop-blur-md backdrop-opacity-60 py-8 text-gray-800 max-sm:w-full ">
+    <footer className="bg-black  py-8 text-gray-800 max-sm:w-full ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8  ">
         {/* About Section */}
         <div>
-          <h3 className="text-lg font-bold mb-4">About Us</h3>
-          <p className="leading-relaxed">
+          <h3 className="text-lg font-bold mb-4 text-red-600">About Us</h3>
+          <p className="leading-relaxed text-white">
             Reachout To All Ministry International is dedicated to spreading the
             Gospel and bringing hope to people worldwide through missions and
             community outreach.
@@ -22,28 +22,28 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+          <h3 className="text-lg font-bold mb-4 text-red-600">Quick Links</h3>
           <ul className="space-y-2">
             <li
-              className="hover:text-blue-600 cursor-pointer"
+              className="hover:text-red-600 cursor-pointer text-white"
               onClick={() => handleNavigation("/event")}
             >
               Events
             </li>
             <li
-              className="hover:text-blue-600 cursor-pointer"
+              className="hover:text-red-600 cursor-pointer text-white"
               onClick={() => handleNavigation("/about")}
             >
               About Us
             </li>
             <li
-              className="hover:text-blue-600 cursor-pointer"
+              className="hover:text-red-600 cursor-pointer text-white"
               onClick={() => handleNavigation("/resources")}
             >
               Resources
             </li>
             <li
-              className="hover:text-blue-600 cursor-pointer"
+              className="hover:text-red-600 cursor-pointer text-white"
               onClick={() => handleNavigation("/contact")}
             >
               Contact
@@ -53,10 +53,10 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-          <p>Phone: +234-7033740721</p>
-          <p>Email: reachouttoall@yahoo.com</p>
-          <p>
+          <h3 className="text-lg font-bold mb-4 text-red-600">Contact Us</h3>
+          <p className="text-white">Phone: +234-7033740721</p>
+          <p className="text-white">Email: reachouttoall@yahoo.com</p>
+          <p className="text-white">
             Blog:{" "}
             <a
               href="https://bawagemmanuel.blogspot.com"
