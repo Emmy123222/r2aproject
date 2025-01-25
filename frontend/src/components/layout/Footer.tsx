@@ -8,8 +8,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black bg-opacity-30 backdrop-blur-md backdrop-opacity-60 py-8 text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-black bg-opacity-30 backdrop-blur-md backdrop-opacity-60 py-8 text-gray-800 max-sm:w-full ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8  ">
         {/* About Section */}
         <div>
           <h3 className="text-lg font-bold mb-4">About Us</h3>
