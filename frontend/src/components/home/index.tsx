@@ -3,7 +3,6 @@ import Sidepic from "./Sidepic";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
 
-
 import Coordinator from "./Coordinator";
 
 const Homes = () => {
@@ -16,7 +15,7 @@ const Homes = () => {
           <AboutUs />
           <Coordinator />
         </div>
-        <div className="relative">
+        <div className="relative max-sm:hidden">
           <Sidepic />
         </div>
       </div>
