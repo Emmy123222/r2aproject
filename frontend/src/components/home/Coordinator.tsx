@@ -33,9 +33,9 @@ const Coordinator = () => {
   ];
 
   return (
-    <div className="p-4 space-y-6 max-sm:space-y-4 max-sm:p-2 bg-gray-100 w-full    shadow-lg   ">
+    <div className="p-4 space-y-6 max-sm:space-y-4 max-sm:p-2 bg-gray-100 w-full shadow-lg">
       {/* Title */}
-      <h1 className="flex text-2xl justify-center items-center text-[40px] text-black font-bold max-sm:text-[24px] max-sm:text-center">
+      <h1 className="text-[40px] text-black font-bold flex justify-center max-sm:text-[24px] max-sm:text-center">
         {title}
       </h1>
 
@@ -67,7 +67,7 @@ const Coordinator = () => {
       </p>
 
       {/* Signature */}
-      <div className="mt-6 text-[20px] text-gray-700 font-serif max-sm:text-[16px]">
+      <div className="mt-6 text-[20px] text-gray-700 font-serif max-sm:text-[16px] max-sm:text-center">
         <p>On behalf of the Brethren,</p>
         <p className="font-bold">Bawa G. Emmanuel</p>
         <p>Coordinator, Reachout To All</p>

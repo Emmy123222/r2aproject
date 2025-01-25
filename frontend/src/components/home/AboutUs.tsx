@@ -3,9 +3,9 @@ import Call from "./Call";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 w-full p-4 space-y-4  shadow-lg  max-sm:p-2 max-sm:space-y-3">
+    <div className="bg-gray-100 w-full p-4 space-y-4 shadow-lg max-sm:p-2 max-sm:space-y-3">
       <div className="p-4 max-sm:p-2">
-        <h1 className="flex text-2xl justify-center items-center text-[40px] text-black font-bold max-sm:text-[24px] max-sm:text-center">
+        <h1 className="text-[40px] text-black font-bold flex justify-center items-center max-sm:text-[24px] max-sm:text-center">
           About Us
         </h1>
         <p className="text-[20px] text-gray-700 font-serif leading-relaxed max-sm:text-[16px] max-sm:leading-normal max-sm:text-justify">
@@ -19,8 +19,12 @@ const AboutUs = () => {
           care of local missionaries and pastors for follow-up and discipleship.
         </p>
       </div>
-      <Believe />
-      <Call />
+      <div className="max-sm:px-2">
+        <Believe />
+      </div>
+      <div className="max-sm:px-2">
+        <Call />
+      </div>
     </div>
   );
 };
