@@ -4,13 +4,13 @@ import imgs from "@/assets/image4.jpg";
 import imag from "@/assets/image5.jpg";
 const Sidepic = () => {
   return (
-    <div className="bg-gray-100 p-5 relative w-full max-sm:hidden">
+    <div className="bg-gray-100 p-5 relative w-[400px] max-sm:hidden">
       <div className="space-y-5">
         {" "}
-        <img src={image} alt="" className="w-[500px]   h-auto object-contain" />
-        <img src={img} alt="" className="w-[500px]   h-auto object-contain" />
-        <img src={imgs} alt="" className="w-[500px]   h-auto object-contain" />
-        <img src={imag} alt="" className="w-[500px]   h-auto object-contain" />
+        <img src={image} alt="" className="w-full   h-auto object-contain" />
+        <img src={img} alt="" className="w-full   h-auto object-contain" />
+        <img src={imgs} alt="" className="w-full   h-auto object-contain" />
+        <img src={imag} alt="" className="w-full   h-auto object-contain" />
       </div>
     </div>
   );

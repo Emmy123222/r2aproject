@@ -23,7 +23,7 @@ const Welcome = () => {
   ];
 
   return (
-    <div className="bg-gray-100 w-[850px] p-4 space-y-4  shadow-lg max-sm:w-full max-sm:p-2 max-sm:space-y-3">
+    <div className="bg-gray-100 w-full p-4 space-y-4  shadow-lg  max-sm:p-2 max-sm:space-y-3">
       <h1 className="flex text-2xl justify-center items-center text-[40px] text-black font-bold max-sm:text-[24px] max-sm:text-center">
         {title}
       </h1>
